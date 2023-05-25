@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Page</h2>
+ <h2> Counter: <span id="counter"></span>0</h2>
+    <button class="increment">increment</button>
+    <button class="decrement">decrement</button>
+    <ul id="list-items">
+    </ul>
+
+<script>
+const incrementBtn = document.querySelector('.increment')
+const decrementBtn = document.querySelector('.decrement')
+const counterEl = document.getElementById('counter')
+let counter = 0
+
+function incrementCouter(){
+    const countEle = document.getElementById('counter')
+    counter++
+    countEle.innerText = counter   
+    
+}
+function decrementCouter(){
+    const countEle = document.getElementById('counter')
+    counter--
+    countEle.innerText = counter
+}
+incrementBtn.addEventListener('click', incrementCouter)
+decrementBtn.addEventListener('click', decrementCouter)
+</script>
+
+</body>
+</html>
+
